@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_background"
+    tools:context=".LoginActivity"
+    android:src="@drawable/running">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_dark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HEALTH\n CALC"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            android:textStyle="bold"
+            android:gravity="end"/>
+
+        <ImageView
+            android:id="@+id/iv_header"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:src="@drawable/healthy_food"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/wave_top"
+        android:layout_below="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_wave_top"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_wave_botton"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Desenvolvido por DS2M"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"
+        android:textSize="15sp"/>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/text_login"
+        android:layout_below="@+id/rl_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:text="Login"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_fazer_login"
+        android:layout_below="@+id/text_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Faça login para continuar"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:textSize="15sp"
+        android:textColor="#ffffff"/>
+
+    <EditText
+        android:id="@+id/edit_text_email"
+        android:layout_below="@+id/text_fazer_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="18dp"
+        android:maxLines="1"
+        android:hint=" E-mail"
+        android:textColor="@color/white"
+        android:background="@drawable/activity_border"
+        android:layout_marginBottom="20dp"
+        android:padding="20px"
+        android:textColorHint="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_email_24"/>
+
+    <EditText
+        android:id="@+id/edit_text_senha"
+        android:layout_below="@+id/edit_text_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:maxLines="1"
+        android:hint=" Senha"
+        android:textColor="@color/white"
+        android:background="@drawable/activity_border"
+        android:layout_marginBottom="20dp"
+        android:padding="20px"
+        android:textColorHint="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"/>
+
+    <Button
+        android:id="@+id/button_entrar"
+        android:layout_below="@+id/edit_text_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="ENTRAR"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <CheckBox
+        android:id="@+id/checkbox_lembrar"
+        android:layout_below="@+id/button_entrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="24dp"
+        android:text="Lembrar-me"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/text_esqueci"
+        android:layout_below="@+id/checkbox_lembrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Esqueci a senha"
+        android:textSize="15sp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="24dp"
+        android:textColor="@color/blue_meiozinho"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_below="@+id/text_esqueci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Criar uma conta agora"
+        android:textSize="15sp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="24dp"
+        android:textColor="@color/blue_meiozinho"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_below="@+id/text_esqueci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Não tem uma conta?"
+        android:textSize="15sp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="180dp"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
