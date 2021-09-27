@@ -8,8 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".Cadastro"
     android:background="@drawable/activity_background"
-    android:orientation="vertical"
-    android:src="@drawable/running">
+    android:orientation="vertical">
 
   <LinearLayout
       android:layout_width="match_parent"
@@ -21,7 +20,8 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         app:cardBackgroundColor="@drawable/activity_background"
-        app:cardCornerRadius="60dp">
+        app:cardCornerRadius="60dp"
+        android:layout_marginTop="24dp">
 
       <ImageView
           android:layout_width="120dp"
@@ -54,7 +54,7 @@
       android:layout_marginBottom="20dp"
       android:padding="24px"
       android:textColorHint="@color/white"
-      android:textSize="24sp"/>
+      android:textSize="18sp"/>
 
   <EditText
       android:layout_width="match_parent"
@@ -67,7 +67,7 @@
       android:layout_marginBottom="20dp"
       android:padding="20px"
       android:textColorHint="@color/white"
-      android:textSize="24sp"/>
+      android:textSize="18sp"/>
 
   <EditText
       android:layout_width="match_parent"
@@ -80,7 +80,7 @@
       android:layout_marginBottom="20dp"
       android:padding="20px"
       android:textColorHint="@color/white"
-      android:textSize="24sp"/>
+      android:textSize="18sp"/>
 
   <EditText
       android:layout_width="match_parent"
@@ -93,13 +93,13 @@
       android:layout_marginBottom="20dp"
       android:padding="20px"
       android:textColorHint="@color/white"
-      android:textSize="24sp"/>
+      android:textSize="18sp"/>
 
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="Sexo"
-      android:textSize="24sp"
+      android:textSize="18sp"
       android:layout_marginStart="24dp"
       android:layout_marginEnd="24dp"/>
 
@@ -108,17 +108,104 @@
       android:layout_height="wrap_content"
       android:orientation="horizontal"
       android:layout_marginStart="24dp">
-    <RadioButton android:id="@+id/radio_pirates"
+    <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="feminino"
-        android:textSize="24sp"
-
+        android:text="Feminino"
+        android:textSize="18sp"
         android:layout_marginEnd="24dp"/>
-    <RadioButton android:id="@+id/radio_ninjas"
+
+    <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="masculino"
-        android:textSize="24sp"/>
+        android:text="Masculino"
+        android:textSize="18sp"/>
   </RadioGroup>
+
+  <TextView
+
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text=" Dados para autenticação"
+      android:layout_marginBottom="10dp"
+      android:drawableLeft="@drawable/ic_baseline_lock_24"
+      android:textSize="18sp"
+      android:layout_marginStart="24dp"
+      android:layout_marginEnd="24dp"
+      android:layout_marginTop="24dp"/>
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginEnd="24dp"
+      android:maxLines="1"
+      android:hint="E-mail"
+      android:textColor="@color/white"
+      android:layout_marginBottom="20dp"
+      android:padding="20px"
+      android:textColorHint="@color/white"
+      android:textSize="18sp"/>
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginEnd="24dp"
+      android:maxLines="1"
+      android:hint="Senha"
+      android:textColor="@color/white"
+      android:layout_marginBottom="20dp"
+      android:padding="20px"
+      android:textColorHint="@color/white"
+      android:textSize="18sp"/>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text=" Dados pessoais"
+      android:layout_marginBottom="10dp"
+      android:drawableLeft="@drawable/ic_baseline_person_24"
+      android:textSize="18sp"
+      android:layout_marginStart="24dp"
+      android:layout_marginEnd="24dp"/>
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginEnd="24dp"
+      android:maxLines="1"
+      android:hint="Nome"
+      android:textColor="@color/white"
+      android:layout_marginBottom="20dp"
+      android:padding="20px"
+      android:textColorHint="@color/white"
+      android:textSize="18sp"/>
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginEnd="24dp"
+      android:maxLines="1"
+      android:hint="Profissão"
+      android:textColor="@color/white"
+      android:layout_marginBottom="20dp"
+      android:padding="20px"
+      android:textColorHint="@color/white"
+      android:textSize="18sp"/>
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginEnd="24dp"
+      android:maxLines="1"
+      android:hint="Altura"
+      android:textColor="@color/white"
+      android:layout_marginBottom="20dp"
+      android:padding="20px"
+      android:textColorHint="@color/white"
+      android:textSize="18sp"/>
   </LinearLayout>

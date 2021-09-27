@@ -9,9 +9,11 @@
         android:roundIcon="@drawable/running"
         android:supportsRtl="true"
         android:theme="@style/Theme.PrimeiroApp" >
+        <activity android:name=".DashboardActivity" >
+        </activity>
         <activity android:name=".Cadastro" >
         </activity>
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
