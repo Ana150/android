@@ -147,7 +147,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="24dp"
         android:text="Lembrar-me"
-        android:textColor="@color/white"/>
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/text_esqueci"
@@ -163,6 +163,7 @@
         android:textStyle="bold"/>
 
     <TextView
+        android:id="@+id/text_criarConta"
         android:layout_below="@+id/text_esqueci"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

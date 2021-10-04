@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportActionBar!!.hide()
         val tvHello = findViewById<TextView>(R.id.tv_hello)
 
         tvHello.setOnClickListener {
