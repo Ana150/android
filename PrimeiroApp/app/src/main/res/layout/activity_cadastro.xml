@@ -50,43 +50,93 @@
        android:textColor="#ffffff"
        android:textSize="24sp" />
 
-   <EditText
-       android:layout_width="match_parent"
+   <TextView
+
+       android:layout_width="wrap_content"
        android:layout_height="wrap_content"
+       android:text=" Dados para autenticação"
+       android:layout_marginBottom="10dp"
+       android:drawableLeft="@drawable/ic_baseline_lock_24"
+       android:textSize="18sp"
        android:layout_marginStart="24dp"
        android:layout_marginEnd="24dp"
-       android:maxLines="1"
-       android:hint="Nome"
-       android:textColor="@color/white"
-       android:layout_marginBottom="20dp"
-       android:padding="24px"
-       android:textColorHint="@color/white"
-       android:textSize="18sp"/>
+       android:layout_marginTop="24dp"/>
 
    <EditText
+       android:id="@+id/text_email"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="24dp"
+       android:layout_marginEnd="24dp"
+       android:layout_marginBottom="20dp"
+       android:hint="E-mail"
+       android:maxLines="1"
+       android:padding="20px"
+       android:textColorHint="@color/black"
+       android:textSize="18sp" />
+
+   <EditText
+       android:id="@+id/text_senha"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="24dp"
+       android:layout_marginEnd="24dp"
+       android:layout_marginBottom="20dp"
+       android:hint="Senha"
+       android:maxLines="1"
+       android:padding="20px"
+       android:textColorHint="@color/black"
+       android:textSize="18sp" />
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text=" Dados pessoais"
+       android:layout_marginBottom="10dp"
+       android:drawableLeft="@drawable/ic_baseline_person_24"
+       android:textSize="18sp"
+       android:layout_marginStart="24dp"
+       android:layout_marginEnd="24dp"/>
+
+   <EditText
+       android:id="@+id/text_nome"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="24dp"
+       android:layout_marginEnd="24dp"
+       android:layout_marginBottom="20dp"
+       android:hint="Nome"
+       android:maxLines="1"
+       android:padding="20px"
+       android:textColorHint="@color/black"
+       android:textSize="18sp" />
+
+   <EditText
+       android:id="@+id/text_profissao"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_marginStart="24dp"
        android:layout_marginEnd="24dp"
        android:maxLines="1"
-       android:hint="Professor"
-       android:textColor="@color/white"
+       android:hint="Profissão"
+       android:textColor="@color/black"
        android:layout_marginBottom="20dp"
        android:padding="20px"
-       android:textColorHint="@color/white"
+       android:textColorHint="@color/black"
        android:textSize="18sp"/>
 
    <EditText
+       android:id="@+id/text_altura"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_marginStart="24dp"
        android:layout_marginEnd="24dp"
        android:maxLines="1"
        android:hint="Altura"
-       android:textColor="@color/white"
+       android:textColor="@color/black"
        android:layout_marginBottom="20dp"
        android:padding="20px"
-       android:textColorHint="@color/white"
+       android:textColorHint="@color/black"
        android:textSize="18sp"/>
 
    <EditText
@@ -97,10 +147,10 @@
        android:layout_marginEnd="24dp"
        android:maxLines="1"
        android:hint="Data de nascimento"
-       android:textColor="@color/white"
+       android:textColor="@color/black"
        android:layout_marginBottom="20dp"
        android:padding="20px"
-       android:textColorHint="@color/white"
+       android:textColorHint="@color/black"
        android:textSize="18sp"
        android:focusable="false"/>
 
@@ -131,91 +181,5 @@
          android:textSize="18sp"/>
    </RadioGroup>
 
-   <TextView
-
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text=" Dados para autenticação"
-       android:layout_marginBottom="10dp"
-       android:drawableLeft="@drawable/ic_baseline_lock_24"
-       android:textSize="18sp"
-       android:layout_marginStart="24dp"
-       android:layout_marginEnd="24dp"
-       android:layout_marginTop="24dp"/>
-
-   <EditText
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_marginStart="24dp"
-       android:layout_marginEnd="24dp"
-       android:maxLines="1"
-       android:hint="E-mail"
-       android:textColor="@color/white"
-       android:layout_marginBottom="20dp"
-       android:padding="20px"
-       android:textColorHint="@color/white"
-       android:textSize="18sp"/>
-
-   <EditText
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_marginStart="24dp"
-       android:layout_marginEnd="24dp"
-       android:maxLines="1"
-       android:hint="Senha"
-       android:textColor="@color/white"
-       android:layout_marginBottom="20dp"
-       android:padding="20px"
-       android:textColorHint="@color/white"
-       android:textSize="18sp"/>
-
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text=" Dados pessoais"
-       android:layout_marginBottom="10dp"
-       android:drawableLeft="@drawable/ic_baseline_person_24"
-       android:textSize="18sp"
-       android:layout_marginStart="24dp"
-       android:layout_marginEnd="24dp"/>
-
-   <EditText
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_marginStart="24dp"
-       android:layout_marginEnd="24dp"
-       android:maxLines="1"
-       android:hint="Nome"
-       android:textColor="@color/white"
-       android:layout_marginBottom="20dp"
-       android:padding="20px"
-       android:textColorHint="@color/white"
-       android:textSize="18sp"/>
-
-   <EditText
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_marginStart="24dp"
-       android:layout_marginEnd="24dp"
-       android:maxLines="1"
-       android:hint="Profissão"
-       android:textColor="@color/white"
-       android:layout_marginBottom="20dp"
-       android:padding="20px"
-       android:textColorHint="@color/white"
-       android:textSize="18sp"/>
-
-   <EditText
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_marginStart="24dp"
-       android:layout_marginEnd="24dp"
-       android:maxLines="1"
-       android:hint="Altura"
-       android:textColor="@color/white"
-       android:layout_marginBottom="20dp"
-       android:padding="20px"
-       android:textColorHint="@color/white"
-       android:textSize="18sp"/>
  </LinearLayout>
   </ScrollView>

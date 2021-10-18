@@ -5,15 +5,33 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.Toast
 import java.util.*
 
+
+
 class Cadastro : AppCompatActivity() {
+
+    lateinit var editEmail: EditText
+    lateinit var editSenha: EditText
+    lateinit var editNome: EditText
+    lateinit var editProfissao: EditText
+    lateinit var editAltura: EditText
+    lateinit var editData: EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastro)
+
+        editEmail = findViewById(R.id.text_email)
+        editSenha = findViewById(R.id.text_senha)
+        editNome = findViewById(R.id.text_nome)
+        editProfissao = findViewById(R.id.text_profissao)
+        editAltura = findViewById(R.id.text_altura)
+        editData = findViewById(R.id.text_data)
 
         supportActionBar!!.title = "Cadastro"
 
@@ -36,18 +54,83 @@ class Cadastro : AppCompatActivity() {
                     }, ano, mes, dia)
             dp.show()
         }
+
     }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_teste, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId){
-            R.id.menu_save -> {
-                Toast.makeText(this, "Salvar", Toast.LENGTH_SHORT).show()
-            }
+
+        if (validarCampos()){
+
         }
         return true
+
+        when (item.itemId){
+            R.id.menu_save -> {
+                if (editEmail.text.isEmpty()){
+                    editEmail.error = "O campo email é obrigatório!"
+                }
+
+                if (editSenha.text.isEmpty()){
+                    editSenha.error = "O campo senha é obrigatório!"
+                }
+                if (editNome.text.isEmpty()){
+                    editNome.error = "O campo nome é obrigatório!"
+                }
+
+                if (editProfissao.text.isEmpty()){
+                    editProfissao.error = "O campo profissão é obrigatório!"
+                }
+                if (editAltura.text.isEmpty()){
+                    editAltura.error = "O campo altura é obrigatório!"
+                }
+
+                if (editData.text.isEmpty()){
+                    editData.error = "O campo data é obrigatório!"
+                }
+            }
+        }
+
+
+        return true
     }
+
+    fun validarCampos() : Boolean{
+        var valido = true
+
+        if (editEmail.text.isEmpty()){
+            editEmail.error = "O campo email é obrigatório!"
+            valido = false
+        }
+
+        if (editSenha.text.isEmpty()){
+            editSenha.error = "O campo senha é obrigatório!"
+            valido = false
+        }
+        if (editNome.text.isEmpty()){
+            editNome.error = "O campo nome é obrigatório!"
+            valido = false
+        }
+
+        if (editProfissao.text.isEmpty()){
+            editProfissao.error = "O campo profissão é obrigatório!"
+            valido = false
+        }
+
+        if (editAltura.text.isEmpty()){
+            editAltura.error = "O campo altura é obrigatório!"
+            valido = false
+        }
+        if (editData.text.isEmpty()){
+            editData.error = "O campo data é obrigatório!"
+            valido = false
+        }
+
+        return valido
     }
+
+}
