@@ -24,12 +24,13 @@
      <androidx.cardview.widget.CardView
          android:layout_width="100dp"
          android:layout_height="100dp"
-         app:cardCornerRadius="60dp"
+         app:cardCornerRadius="50dp"
          android:layout_marginTop="24dp">
 
        <ImageView
-           android:layout_width="120dp"
-           android:layout_height="120dp"
+           android:id="@+id/ivFotoPerfil"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
            android:src="@drawable/images"
            android:layout_gravity="center"
            android:scaleType="centerCrop"/>/>
@@ -41,6 +42,7 @@
    </LinearLayout>
 
    <TextView
+       android:id="@+id/tvTrocarFoto"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_gravity="center"

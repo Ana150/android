@@ -2,19 +2,23 @@ package com.example.primeiroapp.ui
 
 import android.app.DatePickerDialog
 import android.content.Context
+import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.EditText
-import android.widget.RadioButton
-import android.widget.Toast
+import android.widget.*
 import com.example.primeiroapp.R
 import com.example.primeiroapp.model.Usuario
+import com.example.primeiroapp.utils.convertBitmapToBase64
 import com.example.primeiroapp.utils.convertStringToLocalDate
 import java.time.LocalDate
 import java.util.*
 
+const val  CODE_IMAGE = 100
 
 
 class Cadastro : AppCompatActivity() {
@@ -27,6 +31,10 @@ class Cadastro : AppCompatActivity() {
     lateinit var editData: EditText
     lateinit var radioF: RadioButton
     lateinit var radioM: RadioButton
+    lateinit var tvTrocarFoto: TextView
+    lateinit var ivFotoPerfil: ImageView
+    var imageBitmap: Bitmap? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,8 +48,16 @@ class Cadastro : AppCompatActivity() {
         editData = findViewById(R.id.text_data)
         radioF = findViewById(R.id.feminino)
         radioM = findViewById(R.id.masculino)
+        tvTrocarFoto = findViewById(R.id.tvTrocarFoto)
+        ivFotoPerfil = findViewById(R.id.ivFotoPerfil)
 
         supportActionBar!!.title = "Cadastro"
+
+        //abrir a galeria para trocar foto
+
+        tvTrocarFoto.setOnClickListener {
+            abrirGaleria()
+        }
 
 
         //criando um calendario
@@ -58,11 +74,59 @@ class Cadastro : AppCompatActivity() {
         etDataNascimento.setOnClickListener {
             val dp = DatePickerDialog(this,
                     DatePickerDialog.OnDateSetListener { view, _ano, _mes, _dia ->
-                        etDataNascimento.setText("$_dia/${_mes + 1}/$_ano")
+
+                        var diaFinal = _dia
+                        var mesFinal = _mes + 1
+
+                        var mesString = "$mesFinal"
+                        var diaString = "$diaFinal"
+
+                        if (mesFinal < 10){
+                            mesString = "0$mesFinal"
+                        }
+
+                        if (diaFinal < 10){
+                            diaString = "0$diaFinal"
+                        }
+
+
+                        Log.i("xpto",_dia.toString())
+                        Log.i("xpto",_mes.toString())
+
+                        etDataNascimento.setText("$diaString/$mesString/$_ano")
                     }, ano, mes, dia)
             dp.show()
         }
 
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, imagem: Intent?) {
+        super.onActivityResult(requestCode, resultCode, imagem)
+
+        if(requestCode == CODE_IMAGE && resultCode == -1){
+            //recuperar imagem do stream
+            val fluxoImgem = contentResolver.openInputStream(imagem!!.data!!)
+
+            //converter bits em bitmap
+
+            imageBitmap = BitmapFactory.decodeStream(fluxoImgem)
+
+            //colocar
+            ivFotoPerfil.setImageBitmap(imageBitmap)
+        }
+    }
+
+    private fun abrirGaleria() {
+        //abrir a galeria de imagens dos dispositivo
+        val intent = Intent(Intent.ACTION_GET_CONTENT)
+        intent.type = "image/*"
+
+        // Abrir a activity reponsavel por exibir as imagens
+        //esta activity retorna o conteudo selecionado para o nosso app
+
+        startActivityForResult(
+                Intent.createChooser(intent,"Escolha uma foto"), CODE_IMAGE
+        )
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -88,7 +152,8 @@ class Cadastro : AppCompatActivity() {
                             nascimento.dayOfMonth
                     ),
                     editProfissao.text.toString(),
-                    if (radioF.isChecked) 'F' else 'M'
+                    if (radioF.isChecked) 'F' else 'M',
+                    convertBitmapToBase64(imageBitmap!!)
 
             )
 
@@ -114,6 +179,7 @@ class Cadastro : AppCompatActivity() {
             editor.putString("dataNacimento", usuario.dataNascimento.toString())
             editor.putString("profissao", usuario.profissão)
             editor.putString("sexo", usuario.sexo.toString())
+            editor.putString("foto", usuario.foto)
             editor.apply()
         }
 
