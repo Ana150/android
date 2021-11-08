@@ -11,9 +11,10 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.*
+import androidx.core.graphics.drawable.toBitmap
+import com.example.imc.utils.convertBitmapToBase64
 import com.example.primeiroapp.R
 import com.example.primeiroapp.model.Usuario
-import com.example.primeiroapp.utils.convertBitmapToBase64
 import com.example.primeiroapp.utils.convertStringToLocalDate
 import java.time.LocalDate
 import java.util.*
@@ -50,6 +51,9 @@ class Cadastro : AppCompatActivity() {
         radioM = findViewById(R.id.masculino)
         tvTrocarFoto = findViewById(R.id.tvTrocarFoto)
         ivFotoPerfil = findViewById(R.id.ivFotoPerfil)
+
+        // Carregar bitmap padrão coso o usuario não esclha uma foro.
+        imageBitmap = BitmapFactory.decodeResource(resources, R.drawable.running)
 
         supportActionBar!!.title = "Cadastro"
 
@@ -105,11 +109,11 @@ class Cadastro : AppCompatActivity() {
 
         if(requestCode == CODE_IMAGE && resultCode == -1){
             //recuperar imagem do stream
-            val fluxoImgem = contentResolver.openInputStream(imagem!!.data!!)
+            val fluxoImagem = contentResolver.openInputStream(imagem!!.data!!)
 
             //converter bits em bitmap
 
-            imageBitmap = BitmapFactory.decodeStream(fluxoImgem)
+            imageBitmap = BitmapFactory.decodeStream(fluxoImagem)
 
             //colocar
             ivFotoPerfil.setImageBitmap(imageBitmap)
