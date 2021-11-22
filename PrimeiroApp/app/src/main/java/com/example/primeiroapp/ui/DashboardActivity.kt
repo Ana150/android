@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.imc.utils.convertBase64ToBitmap
 import com.example.primeiroapp.R
+import com.example.primeiroapp.utils.calcularIdade
 
 class DashboardActivity : AppCompatActivity() {
     lateinit var tvNome: TextView
@@ -39,8 +40,9 @@ class DashboardActivity : AppCompatActivity() {
         tvNome.text = arquivo.getString("nome", "")
         tvProfissao.text = arquivo.getString("profissao", "")
         tvAltura.text = arquivo.getFloat("altura", 0.0f).toString()
+        tvIdade.text = calcularIdade(arquivo.getString("dataNacimento", "")!!).toString()
 
-        val bitmap = convertBase64ToBitmap(arquivo.getString("fotoPerfil", "")!!)
+        val bitmap = convertBase64ToBitmap(arquivo.getString("foto", "")!!)
         ivPerfil.setImageBitmap(bitmap)
     }
 }
