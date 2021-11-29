@@ -8,107 +8,219 @@
     android:background="@drawable/activity_background"
     android:orientation="vertical"
     tools:ignore="ExtraText"
-    android:padding="30dp">
+    >
 
-    <ImageView
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:src="@drawable/training"
-        android:layout_gravity="center"
-        android:scaleType="centerCrop"/>
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:padding="25dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/montserrat"
-        android:textAlignment="center"
-        android:text="Vamos nos pesar?"
-        android:layout_gravity="center"
-        android:textColor="#504F4F"
-        android:textSize="24sp"
-        />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="15dp"
-        >
+           <androidx.cardview.widget.CardView
+               android:layout_width="60dp"
+               android:layout_height="60dp"
+               app:cardCornerRadius="30dp"
+               android:layout_gravity="right">
 
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/ic_baseline_info_24"
-            android:layout_gravity="center"
-            android:scaleType="centerCrop"/>
+               <ImageView
+                   android:id="@+id/iv_dash_foto"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/images"
+                   android:scaleType="centerCrop" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="50px"
-            android:layout_marginStart="10px"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Mantenha seu peso sempre atualizado assim  você poderá acompanhar sua evolução."
-            android:textColor="#504F4F"
-            android:textSize="13.8sp" />
-    </LinearLayout>
+           </androidx.cardview.widget.CardView>
+
+           <ImageView
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:src="@drawable/training"
+               android:layout_gravity="center"
+               android:scaleType="centerCrop"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="10dp"
+               android:fontFamily="@font/montserrat"
+               android:textAlignment="center"
+               android:text="Vamos nos pesar?"
+               android:layout_gravity="center"
+               android:textColor="#FFFFFF"
+               android:textSize="24sp"
+               />
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="15dp">
+
+               <ImageView
+                   android:layout_width="25dp"
+                   android:layout_height="25dp"
+                   android:src="@drawable/ic_baseline_info_24"
+                   android:layout_gravity="center"
+                   android:scaleType="centerCrop"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="15dp"
+                   android:layout_marginBottom="10dp"
+                   android:fontFamily="@font/montserrat"
+                   android:text="Mantenha seu peso sempre atualizado assim \n você poderá acompanhar sua evolução."
+                   android:textColor="#FFFFFF"
+                   android:textSize="13.8sp" />
+           </LinearLayout>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/montserrat"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="Dados da sua pesagem"
-        android:textColor="#504F4F"
-        android:textSize="20sp"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="40dp"
+               android:layout_marginTop="15dp"
+               android:layout_marginBottom="10dp"
+               android:fontFamily="@font/montserrat"
+               android:layout_gravity="center"
+               android:gravity="center"
+               android:text="Dados da sua pesagem"
+               android:textColor="#FFFFFF"
+               android:textSize="20sp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="5dp"
-        android:text="Data da pesagem"
-        android:textColor="#504F4F"
-        android:textSize="15sp"/>
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="@font/montserrat"
-        android:text="XX/XX/XXXX"
-        android:textColor="#504F4F"
-        android:textSize="18sp"/>
+               <ImageView
+                   android:layout_width="25dp"
+                   android:layout_height="25dp"
+                   android:src="@drawable/ic_baseline_calendar_today_24"
+                   android:layout_gravity="center"
+                   android:scaleType="centerCrop"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
-        android:text="Seu peso"
-        android:layout_marginBottom="5dp"
-        android:textColor="#504F4F"
-        android:textSize="15sp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat"
-        android:text="00 kg"
-        android:textColor="#504F4F"
-        android:textSize="18sp"/>
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="19dp"
+                       android:layout_marginTop="10dp"
+                       android:layout_marginBottom="10dp"
+                       android:fontFamily="@font/montserrat"
+                       android:text="Data da pesagem"
+                       android:layout_marginStart="15dp"
+                       android:textColor="#FFFFFF"
+                       android:textSize="15sp" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="20px"
-        android:text="Pesar agora"
-        android:textColor="#504F4F"
-        />
+                   <TextView
+                       android:id="@+id/tv_data_pesagem"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="15dp"
+                       android:layout_marginBottom="10dp"
+                       android:fontFamily="@font/montserrat"
+                       android:textColor="#FFFFFF"
+                       android:textSize="18sp" />
+               </LinearLayout>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <ImageView
+                   android:layout_width="25dp"
+                   android:layout_height="25dp"
+                   android:src="@drawable/ic_baseline_directions_bike_24"
+                   android:layout_gravity="center"
+                   android:scaleType="centerCrop"/>
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/montserrat"
+                       android:text="Nível de atividade"
+                       android:layout_marginTop="10dp"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginStart="15dp"
+                       android:textColor="#FFFFFF"
+                       android:textSize="15sp"/>
+
+                   <Spinner
+                       android:id="@+id/spinnerNivel"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="10dp"
+                       android:drawSelectorOnTop="true"
+                       android:entries="@array/niveis"
+                       android:theme="@style/Spinner"
+                       android:popupBackground="@color/blue_meiozinho"/>
+
+               </LinearLayout>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <ImageView
+                   android:layout_width="25dp"
+                   android:layout_height="25dp"
+                   android:src="@drawable/ic_baseline_fitness_center_24"
+                   android:layout_gravity="center"
+                   android:scaleType="centerCrop"/>
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/montserrat"
+                       android:text="Seu peso"
+                       android:layout_marginTop="10dp"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginStart="15dp"
+                       android:textColor="#FFFFFF"
+                       android:textSize="15sp"/>
+
+                   <EditText
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:id="@+id/tv_peso"
+                       android:fontFamily="@font/montserrat"
+                       android:layout_marginStart="15dp"
+                       android:textColor="#FFFFFF"
+                       android:textSize="18sp"
+                       android:layout_marginBottom="10dp"/>
+               </LinearLayout>
+           </LinearLayout>
+
+           <Button
+               android:id="@+id/registrarPeso"
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:layout_marginTop="20px"
+               android:text="Pesar agora"
+               android:layout_gravity="center"
+               android:textColor="#FFFFFF" />
+       </LinearLayout>
+   </ScrollView>
 
 </LinearLayout>
 

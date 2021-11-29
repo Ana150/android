@@ -15,6 +15,16 @@ fun convertStringToLocalDate(brazilDate: String) : LocalDate{
 
 }
 
+fun getDataAtualBrasil(): String{
+
+    val hoje = LocalDate.now()
+
+    val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+    val dataBrasil = hoje.format(formatter)
+
+    return dataBrasil
+}
+
 fun calcularIdade(dataNascimento: String): Int{
     Log.i("xxxx", dataNascimento)
     //Obter a data atual

@@ -1,10 +1,12 @@
 package com.example.primeiroapp.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.imc.utils.convertBase64ToBitmap
+import com.example.primeiroapp.PesoActivity
 import com.example.primeiroapp.R
 import com.example.primeiroapp.utils.calcularIdade
 
@@ -17,6 +19,7 @@ class DashboardActivity : AppCompatActivity() {
     lateinit var tvIdade: TextView
     lateinit var tvAltura: TextView
     lateinit var ivPerfil: ImageView
+    lateinit var imgNovaPesagem: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +33,12 @@ class DashboardActivity : AppCompatActivity() {
         tvIdade = findViewById(R.id.tv_dash_idade)
         tvAltura = findViewById(R.id.tv_dash_altura)
         ivPerfil = findViewById(R.id.iv_dash_foto)
+        imgNovaPesagem = findViewById(R.id.pesar_agora)
+
+        imgNovaPesagem.setOnClickListener {
+            val intent = Intent(this, PesoActivity::class.java)
+            startActivity(intent)
+        }
 
         carregarDashboard()
     }
